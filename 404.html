@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/images/e.g.jpg">
+    <link rel="stylesheet" href="/css/mvp_coook-think.css">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - file not found | Coook Think</title>
+
+<!-- Javascript code credit: Display a Random Image Using JavaScript https://www.dyn-web.com/code/random-image-js/ -->
+
+<script type="text/javascript">
+// place your images in this array
+var random_images_array = ['Photo by Andrea Lightfoot on Unsplash.jpg', 'Photo by Andrey Zvyagintsev on Unsplash.jpg', 'Photo by Katie Moum on Unsplash.jpg', 'Photo by Levi Price on Unsplash.jpg', 'Photo by Max Baskakov on Unsplash.jpg', 'Photo by Noah Austin on Unsplash.jpg'];
+    
+function getRandomImage(imgAr, path) {
+    path = path || 'images/'; // default path here
+    var num = Math.floor( Math.random() * imgAr.length );
+    var img = imgAr[ num ];
+    var imgStr = '<img src="' + path + img + '" alt = "">';
+    document.write(imgStr); document.close();
+}
+</script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="https://coook-think.github.io/"><img alt="接下來我舉個栗子" src="/images/e.g.jpg" height="100"></a>
+            <ul>
+                <li><a href="https://coook-think.github.io/">Home</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+	<h1>404 - file not found</h1>
+    </header>
+
+    <main>
+	<p align="center"><a href="https://coook-think.github.io/">back to the homepage</a></p>
+	<div>
+    <!-- This script segment displays an image from the array -->
+    <p align="center"><script type="text/javascript">getRandomImage(random_images_array, '/images/')</script></p>
+	</div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>
+            <a href="https://coook-think.github.io/">Coook Think</a><br>
+        </p>
+    </footer>
+</body>
+
+</html>
